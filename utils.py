@@ -43,9 +43,9 @@ import sklearn
 
 def linearRegression(x_train, y_train, x_test=None, y_test=None):
     model = sklearn.linear_model.LinearRegression().fit(x_train, y_train)
-    if y_test:
+    if type(y_test) != type(None):
         predictions = model.predict(y_test)
-        if x_test:
+        if type(x_test) != type(None):
             score = model.score(x_test, y_test)
             return model, predictions, score
         return model, predictions
@@ -56,9 +56,9 @@ def linearRegression(x_train, y_train, x_test=None, y_test=None):
 
 def logRegression(x_train, y_train, x_test=None, y_test=None):
     model = sklearn.linear_model.LogisticRegression().fit(x_train, y_train)
-    if y_test:
+    if type(y_test) != type(None):
         predictions = model.predict(y_test)
-        if x_test:
+        if type(x_test) != type(None):
             score = model.score(x_test, y_test)
             return model, predictions, score
         return model, predictions
@@ -70,9 +70,9 @@ def logRegression(x_train, y_train, x_test=None, y_test=None):
 def MLPclassifier(x_train, y_train, x_test=None, y_test=None):
     model = sklearn.neural_network.MLPClassifier()
     model.fit(x_train, y_train)
-    if y_test:
+    if type(y_test) != type(None):
         predictions = model.predict(y_test)
-        if x_test:
+        if type(x_test) != type(None):
             score = model.score(x_test, y_test)
             return model, predictions, score
         return model, predictions
@@ -83,9 +83,9 @@ def MLPclassifier(x_train, y_train, x_test=None, y_test=None):
 
 def SVM(x_train, y_train, x_test=None, y_test=None):
     model = sklearn.svm.SVC(kernel='linear').fit(x_train, y_train)
-    if y_test:
+    if type(y_test) != type(None):
         predictions = model.predict(y_test)
-        if x_test:
+        if type(x_test) != type(None):
             score = model.score(x_test, y_test)
             return model, predictions, score
         return model, predictions
@@ -96,9 +96,9 @@ def SVM(x_train, y_train, x_test=None, y_test=None):
 
 def decisionTree(x_train, y_train, x_test=None, y_test=None):
     model = sklearn.tree.DecisionTreeClassifier().fit(x_train, y_train)
-    if y_test:
+    if type(y_test) != type(None):
         predictions = model.predict(y_test)
-        if x_test:
+        if type(x_test) != type(None):
             score = model.score(x_test, y_test)
             return model, predictions, score
         return model, predictions
@@ -109,9 +109,9 @@ def decisionTree(x_train, y_train, x_test=None, y_test=None):
 
 def KNN(x_train, y_train, x_test=None, y_test=None):
     model = sklearn.svm.neighbors.KNeighborsClassifier().fit(x_train, y_train)
-    if y_test:
+    if type(y_test) != type(None):
         predictions = model.predict(y_test)
-        if x_test:
+        if type(x_test) != type(None):
             score = model.score(x_test, y_test)
             return model, predictions, score
         return model, predictions
@@ -123,9 +123,9 @@ def KNN(x_train, y_train, x_test=None, y_test=None):
 from sklearn.ensemble import RandomForestClassifier
 def randomForest(x_train, y_train, x_test=None, y_test=None):
     model = RandomForestClassifier(max_depth=2, random_state=0).fit(x_train, y_train)
-    if y_test:
+    if type(y_test) != type(None):
         predictions = model.predict(y_test)
-        if x_test:
+        if type(x_test) != type(None):
             score = model.score(x_test, y_test)
             return model, predictions, score
         return model, predictions
