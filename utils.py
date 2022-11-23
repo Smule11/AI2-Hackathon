@@ -122,7 +122,7 @@ def KNN(x_train, y_train, x_test=None, y_test=None):
 
 from sklearn.ensemble import RandomForestClassifier
 def randomForest(x_train, y_train, x_test=None, y_test=None):
-    model = RandomForestClassifier.fit(x_train, y_train)
+    model = RandomForestClassifier(max_depth=2, random_state=0).fit(x_train, y_train)
     if y_test:
         predictions = model.predict(y_test)
         if x_test:
