@@ -72,7 +72,7 @@ def MLPclassifier(x_train, y_train, x_test=None, y_test=None):
     model = MLP()
     model.fit(x_train, y_train)
     if type(y_test) != type(None):
-        predictions = model.predict(y_test)
+        predictions = model.predict(x_test)
         if type(x_test) != type(None):
             score = model.score(x_test, y_test)
             return model, predictions, score
