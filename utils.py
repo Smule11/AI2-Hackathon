@@ -156,7 +156,7 @@ def LSTM():
 
 ## 12/14: Neural Network - Transformer
 
-def transformer():
+def Transformer():
     pass
 
 ## 13/14: Neural Network - Autoencoder
