@@ -67,8 +67,8 @@ def logRegression(x_train, y_train, x_test=None, y_test=None):
 
 ## 3/14: MLP
 
-from sklearn.neural_network import MLPClassifier as MLP
-def MLPclassifier(x_train, y_train, x_test=None, y_test=None):
+# from sklearn.neural_network import MLPClassifier as MLP
+def MLP_model(x_train, y_train, x_test=None, y_test=None):
     model = MLP()
     model.fit(x_train, y_train)
     if type(y_test) != type(None):
