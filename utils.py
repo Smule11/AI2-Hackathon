@@ -55,7 +55,7 @@ def linearRegression(x_train, y_train, x_test=None, y_test=None):
 ## 2/14: Logistic Regression
 
 def logRegression(x_train, y_train, x_test=None, y_test=None):
-    model = sklearn.linear_model.LogisticRegression(max_iter=10000).fit(x_train, y_train)
+    model = sklearn.linear_model.LogisticRegression(max_iter=1000).fit(x_train, y_train)
     if type(x_test) != type(None):
         predictions = model.predict(x_test)
         if type(y_test) != type(None):
