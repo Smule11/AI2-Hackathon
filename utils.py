@@ -108,8 +108,9 @@ def decisionTree(x_train, y_train, x_test=None, y_test=None):
     
 ## 6/14: KNN algorithm
 
+from sklearn.neighbors import KNeighborsClassifier
 def KNN(x_train, y_train, x_test=None, y_test=None):
-    model = sklearn.svm.neighbors.KNeighborsClassifier().fit(x_train, y_train)
+    model = KNeighborsClassifier().fit(x_train, y_train)
     if type(x_test) != type(None):
         predictions = model.predict(x_test)
         if type(y_test) != type(None):
