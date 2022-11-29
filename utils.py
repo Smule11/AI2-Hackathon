@@ -83,7 +83,7 @@ def MLP_model(x_train, y_train, x_test=None, y_test=None):
 ## 4/14: SVM
 
 def SVM(x_train, y_train, x_test=None, y_test=None):
-    model = sklearn.svm.SVC(kernel='linear').fit(x_train, y_train)
+    model = sklearn.svm.SVC(kernel='rbf', max_iter=200).fit(x_train, y_train)
     if type(x_test) != type(None):
         predictions = model.predict(x_test)
         if type(y_test) != type(None):
